@@ -8,12 +8,12 @@ final class SimpleCryptTest extends \PHPUnit\Framework\TestCase
 {
     public function testCrypt()
     {
-        $password = "senha";
+        $password = "simplecrypt";
 
         $simpleCrypt = new SimpleCrypt('1', '2');
 
         $encryptedPassword = $simpleCrypt->encrypt($password);
-        $this->assertEquals('eG9aTkxqVzM5M05nNFhnL0dkKzBtQT09', $encryptedPassword);
+        $this->assertEquals('VGU4aUJiM1dZWmhHaDNGUUlnd05vUT09', $encryptedPassword);
 
         $decryptedPassword = $simpleCrypt->decrypt($encryptedPassword);
         $this->assertEquals($password, $decryptedPassword);
