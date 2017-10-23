@@ -1,0 +1,45 @@
+{
+    "name": "martinusso/simplecrypt",
+    "type": "library",
+    "description": "Encrypts and decrypts data using PHP with OpenSSL",
+    "keywords": [
+        "PHP",
+        "encrypt",
+        "decrypt",
+        "OpenSSL"
+    ],
+    "homepage": "https://github.com/martinusso/simplecrypt",
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Breno Borges Martinusso",
+            "email": "martinusso@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.4"
+    },
+    "autoload": {
+        "psr-4": {
+          "SimpleCrypt\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SimpleCrypt\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "cs": "phpcs --standard=PSR2 src",
+        "test": "phpunit -c phpunit.xml",
+    		"test-cover": "phpunit --coverage-text"
+    }
+}
