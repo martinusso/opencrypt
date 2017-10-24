@@ -18,7 +18,7 @@ class OpenCrypt
         $this->secretIV = substr(hash('sha256', $secretIV), 0, 16);
     }
 
-    function encrypt($value) {
+    public function encrypt($value) {
         $output = openssl_encrypt(
             $value,
             $this->encryptMethod,
@@ -29,7 +29,7 @@ class OpenCrypt
         return base64_encode($output);
     }
 
-    function decrypt($value) {
+    public function decrypt($value) {
         return openssl_decrypt(
             base64_decode($value),
             $this->encryptMethod,
