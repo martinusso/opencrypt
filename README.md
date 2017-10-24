@@ -17,35 +17,43 @@ Encrypts and decrypts data using PHP with OpenSSL
 
 ## Tips
 
-  - *$secretKey* should have been previously generated in a cryptographically safe way, like [openssl_random_pseudo_bytes](http://php.net/manual/en/function.openssl-random-pseudo-bytes.php). OpenCrypt has the static method `OpenCrypt::generateKey()` for this.
+  - *$secretKey* should have been previously generated in a cryptographically safe way, like [openssl_random_pseudo_bytes](http://php.net/manual/en/function.openssl-random-pseudo-bytes.php). OpenCrypt has a static method `OpenCrypt::generateKey()` for this.
 
 ## Usage
 
 ```
 $password = "OpenCrypt";
 
-// Should have been previously generated in a cryptographically safe way, like openssl_random_pseudo_bytes
+// Should have been previously generated in a cryptographically safe way
 $secretKey = 'SECRET_KEY';
 
-$iv = base64_decode('hEHLyH4Irwqvnl8uJpHrnQ==');
+// You can pass the IV as argument or it is generated automatically
+$openCrypt = new OpenCrypt($secretKey [, string $iv ]);
 
-$openCrypt = new OpenCrypt($secretKey, $iv);
+// get the IV
+$iv = $openCrypt->iv();
 
 // encrypt
 $encryptedPassword = $openCrypt->encrypt($password);
 // $encryptedPassword = 'GWw3bqL7FqjmRs0yyIR/8A=='
 
-// decrypt later....
+// decrypt
 $decryptedPassword = $openCrypt->decrypt($encryptedPassword);
 // $decryptedPassword = 'OpenCrypt'
 ```
 
 ### generate IV
+
+OpenCrypt offers a static method to generate a safe IV:
+
 ```
 $iv = OpenCrypt::generateIV();
 ```
 
 ### generate key
+
+it is also possible to generate a safe secret key:
+
 ```
 $secretKey = OpenCrypt::generateKey();
 ```
