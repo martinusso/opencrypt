@@ -1,8 +1,8 @@
 <?php
 
-namespace SimpleCrypt;
+namespace OpenCrypt;
 
-class SimpleCrypt
+class OpenCrypt
 {
     private $encryptMethod = "AES-256-CBC";
     private $secretKey;
