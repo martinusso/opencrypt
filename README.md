@@ -1,9 +1,9 @@
 # simplecrypt
 
 [![Build Status](https://travis-ci.org/martinusso/simplecrypt.svg?branch=master)](https://travis-ci.org/martinusso/simplecrypt)
+[![Build Status](https://scrutinizer-ci.com/g/martinusso/simplecrypt/badges/build.png?b=master)](https://scrutinizer-ci.com/g/martinusso/simplecrypt/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/martinusso/simplecrypt/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/martinusso/simplecrypt/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/martinusso/simplecrypt/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/martinusso/simplecrypt/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/martinusso/simplecrypt/badges/build.png?b=master)](https://scrutinizer-ci.com/g/martinusso/simplecrypt/build-status/master)
 
 Encrypts and decrypts data using PHP with OpenSSL
 
