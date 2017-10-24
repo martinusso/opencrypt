@@ -15,6 +15,10 @@ Encrypts and decrypts data using PHP with OpenSSL
 
 `composer require martinusso/opencrypt`
 
+## Tips
+
+  - *$secretKey* should have been previously generated in a cryptographically safe way, like [openssl_random_pseudo_bytes](http://php.net/manual/en/function.openssl-random-pseudo-bytes.php)
+
 ## Usage
 
 ```
@@ -25,8 +29,11 @@ $secretIV = 'SECRET_IV';
 
 $openCrypt = new OpenCrypt($secretKey, $secretIV);
 
+// encrypt
 $encryptedPassword = $openCrypt->encrypt($password);
 // $encryptedPassword = 'RTZPSEUybDZLZy9lSzYwaHk1Y0gxZz09'
+
+// decrypt later....
 $decryptedPassword = $openCrypt->decrypt($encryptedPassword);
 // $decryptedPassword = 'OpenCrypt'
 ```

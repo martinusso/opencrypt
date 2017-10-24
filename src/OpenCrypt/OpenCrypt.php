@@ -4,17 +4,30 @@ namespace OpenCrypt;
 
 class OpenCrypt
 {
-    private $encryptMethod = "AES-256-CBC";
+    /**
+    * The cipher method. For a list of available cipher methods, use openssl_get_cipher_methods().
+    */
+    const CIPHER_METHOD = "AES-256-CBC";
+
+    /**
+     * The key
+     *
+     * Should have been previously generated in a cryptographically safe way, like openssl_random_pseudo_bytes
+     */
     private $secretKey;
+
+    /**
+     * IV - A non-NULL Initialization Vector.
+     *
+     * Encrypt method AES-256-CBC expects 16 bytes - else you will get a warning
+     */
     private $secretIV;
 
     public function __construct(
         string $secretKey,
         string $secretIV
     ) {
-        // hash
         $this->secretKey = hash('sha256', $secretKey);
-        // iv - encrypt method AES-256-CBC expects 16 bytes - else you will get a warning
         $this->secretIV = substr(hash('sha256', $secretIV), 0, 16);
     }
 
