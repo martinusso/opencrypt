@@ -1,5 +1,5 @@
 {
-    "name": "martinusso/simplecrypt",
+    "name": "martinusso/opencrypt",
     "type": "library",
     "description": "Encrypts and decrypts data using PHP with OpenSSL",
     "keywords": [
@@ -8,7 +8,7 @@
         "decrypt",
         "OpenSSL"
     ],
-    "homepage": "https://github.com/martinusso/simplecrypt",
+    "homepage": "https://github.com/martinusso/opencrypt",
     "license": [
         "MIT"
     ],
@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-          "SimpleCrypt\\": "src/"
+          "OpenCrypt\\": "src/OpenCrypt/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SimpleCrypt\\Tests\\": "tests/"
+            "OpenCrypt\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "stable",

@@ -1,32 +1,32 @@
-# simplecrypt
+# opencrypt
 
-[![Build Status](https://travis-ci.org/martinusso/simplecrypt.svg?branch=master)](https://travis-ci.org/martinusso/simplecrypt)
-[![Build Status](https://scrutinizer-ci.com/g/martinusso/simplecrypt/badges/build.png?b=master)](https://scrutinizer-ci.com/g/martinusso/simplecrypt/build-status/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/martinusso/simplecrypt/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/martinusso/simplecrypt/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/martinusso/simplecrypt/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/martinusso/simplecrypt/?branch=master)
+[![Build Status](https://travis-ci.org/martinusso/opencrypt.svg?branch=master)](https://travis-ci.org/martinusso/opencrypt)
+[![Build Status](https://scrutinizer-ci.com/g/martinusso/opencrypt/badges/build.png?b=master)](https://scrutinizer-ci.com/g/martinusso/opencrypt/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/martinusso/opencrypt/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/martinusso/opencrypt/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/martinusso/opencrypt/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/martinusso/opencrypt/?branch=master)
 
 Encrypts and decrypts data using PHP with OpenSSL
 
 ## Installation
 
-`composer require martinusso/simplecrypt`
+`composer require martinusso/opencrypt`
 
 ## Usage
 
 ```
-$password = "simplecrypt";
+$password = "OpenCrypt";
 
 $secretKey = 'SECRET_KEY';
 $secretIV = 'SECRET_IV';
 
-$simpleCrypt = new SimpleCrypt($secretKey, $secretIV);
+$openCrypt = new OpenCrypt($secretKey, $secretIV);
 
-$encryptedPassword = $simpleCrypt->encrypt($password);
-// $encryptedPassword = 'VGU4aUJiM1dZWmhHaDNGUUlnd05vUT09'
-$decryptedPassword = $simpleCrypt->decrypt($encryptedPassword);
-// $decryptedPassword = 'simplecrypt'
+$encryptedPassword = $openCrypt->encrypt($password);
+// $encryptedPassword = 'RTZPSEUybDZLZy9lSzYwaHk1Y0gxZz09'
+$decryptedPassword = $openCrypt->decrypt($encryptedPassword);
+// $decryptedPassword = 'OpenCrypt'
 ```
 
 ## License
 
-This software is open source, licensed under the The MIT License (MIT). See [LICENSE](https://github.com/martinusso/simplecrypt/blob/master/LICENSE) for details.
+This software is open source, licensed under the The MIT License (MIT). See [LICENSE](https://github.com/martinusso/opencrypt/blob/master/LICENSE) for details.
