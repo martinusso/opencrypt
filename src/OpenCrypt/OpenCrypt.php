@@ -34,13 +34,10 @@ class OpenCrypt
     ) {
         $this->secretKey = hash('sha256', $secretKey);
 
-        if (empty($iv)) {
-            $iv = self::generateIV();
-        }
-        $this->iv = $iv;
+        $this->iv = $iv ?: self::generateIV();
     }
 
-    public function encrypt($value) {
+    public function encrypt(string $value) {
         $output = openssl_encrypt(
             $value,
             self::CIPHER_METHOD,
@@ -51,7 +48,7 @@ class OpenCrypt
         return base64_encode($output);
     }
 
-    public function decrypt($value) {
+    public function decrypt(string $value) {
         return openssl_decrypt(
             base64_decode($value),
             self::CIPHER_METHOD,
