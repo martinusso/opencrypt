@@ -1,7 +1,7 @@
 {
     "name": "martinusso/opencrypt",
     "type": "library",
-    "description": "Encrypts and decrypts data using PHP with OpenSSL",
+    "description": "Two-way encryption (encrypt and decrypt) data using PHP with OpenSSL",
     "keywords": [
         "PHP",
         "encrypt",
