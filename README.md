@@ -9,7 +9,7 @@
 [![License](https://poser.pugx.org/martinusso/opencrypt/license)](https://packagist.org/packages/martinusso/opencrypt)
 [![composer.lock](https://poser.pugx.org/martinusso/opencrypt/composerlock)](https://packagist.org/packages/martinusso/opencrypt)
 
-Encrypts and decrypts data using PHP with OpenSSL
+Two-way encryption (encrypt and decrypt) data using PHP with OpenSSL
 
 ## Installation
 
